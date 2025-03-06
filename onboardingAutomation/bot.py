@@ -51,13 +51,7 @@ def main():
     # Opens the BotCity website.
     tab =cc.chrome.open("https://pathfinder.automationanywhere.com/challenges/automationanywherelabs-customeronboarding.html")
 
-    #var_tabChrome = cc.chrome.attach_by_title_url('Login | Automation Pathfinder *')
-
     # Implement here your logic...
-        
-    #Localiza o botão de Aceitando os cookies
-    #var_tabChrome.find_element_by_xpath("//button[text()='Aceitar cookies']").click()
-    #print("Aceitando os cookies")
 
     #Verificando se já estou logado
     if tab.wait_appear_by_xpath(xpath="//button[text()='Community login']" ,wait_timeout=10):
