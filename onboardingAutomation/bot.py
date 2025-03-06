@@ -7,6 +7,18 @@ from botcity.maestro import *
 #Import for Pandas
 import pandas as pd
 
+#Import for Clicknium
+from clicknium import clicknium as cc, locator, ui
+
+#Import for Os
+import os
+
+#Import Sleep
+from time import sleep 
+
+#Import for Select
+from selenium.webdriver.support.ui import Select
+
 # Disable errors if we are not connected to Maestro
 BotMaestroSDK.RAISE_NOT_CONNECTED = False
 
@@ -36,51 +48,59 @@ def main():
     bot.driver_path = r"C:\BotCity\chromedriver.exe"
     # bot.driver_path = "<path to your WebDriver binary>"
 
-    bot.download_folder_path = r"C:\Users\marcos.martins\Downloads"
-
     # Opens the BotCity website.
-    bot.browse("https://pathfinder.automationanywhere.com/challenges/automationanywherelabs-customeronboarding.html")
+    tab =cc.chrome.open("https://pathfinder.automationanywhere.com/challenges/automationanywherelabs-customeronboarding.html")
 
-    bot.maximize_window()
+    #var_tabChrome = cc.chrome.attach_by_title_url('Login | Automation Pathfinder *')
 
     # Implement here your logic...
-    ...
-
+        
     #Localiza o botão de Aceitando os cookies
-    bot.find_element("//button[text()='Aceitar cookies']", By.XPATH).click()
-    print("Aceitando os cookies")
+    #var_tabChrome.find_element_by_xpath("//button[text()='Aceitar cookies']").click()
+    #print("Aceitando os cookies")
 
-    #Localiza o botão de Community login
-    bot.find_element("//button[text()='Community login']", By.XPATH).click()
-    print("Community login")
+    #Verificando se já estou logado
+    if tab.wait_appear_by_xpath(xpath="//button[text()='Community login']" ,wait_timeout=10):
+        print("Botão de Community login apareceu. Realizando login...")
 
-    #Localiza o botão de Community login
-    bot.find_element("//input[@type='text']", By.XPATH).send_keys(var_strEmail)
-    print("Email")
+        #Localiza o botão de Community login e clica
+        print("Community login")
+        tab.find_element_by_xpath("//button[text()='Community login']").click()
 
-    bot.enter()
+        #Inserindo E-mail
+        print("Email")
+        tab.find_element_by_xpath("//input[@type='text']").set_text(var_strEmail)
 
-    #Inserindo a senha
-    bot.find_element("//input[@type='password']", By.XPATH).send_keys(var_strSenha)
-    print("Senha")
+        #Clicando no botão next
+        print("Next")
+        tab.find_element_by_xpath("//button[text()='Next']").click()
 
-    bot.enter()
+        #Inserindo a senha
+        print("Senha")
+        tab.find_element_by_xpath("//input[@type='password']").set_text(var_strSenha)
 
-    #Localiza o botão de Download
-    bot.find_element("//a[text()='Download CSV']", By.XPATH).click()
-    print("Feito o download do Excel")
+        #Clicando no botão de Log In
+        print("Log In")
+        tab.find_element_by_xpath("//button[text()='Log in']").click()
+        
+    else:
+        print("Botão de Community login não apareceu. Pulando login...")
 
     #Caminho final do Arquivo     
     var_strCaminhoArquivo = r"C:\Users\marcos.martins\Downloads\customer-onboarding-challenge.csv"
-    print("Transferido para a pasta de downloads")
 
-    var_intTempoEspera = 60
+    #Verificando se já existe o arquivo baixado, se sim excluindo o mesmo
+    if os.path.exists(var_strCaminhoArquivo):
+        os.remove(var_strCaminhoArquivo)
+        print(f"Arquivo existente excluído: {var_strCaminhoArquivo}")
+    else:
+        print("Nenhum arquivo anterior encontrado!")
 
-    #Espera o donwload ser finalizado
-    bot.wait_for_downloads(timeout= var_intTempoEspera)
+    #Localiza o botão de Download
+    tab.find_element_by_xpath("//a[text()='Download CSV']").click()
+    print("Fazendo o download do Excel")
 
-    #Volta para a página do RPAChallenge
-    bot.back()
+    sleep(5)
 
     #Lê o arquivo excel
     var_dfClientes = pd.read_csv(var_strCaminhoArquivo)
@@ -103,54 +123,50 @@ def main():
         var_strOffersDiscounts = linha['Offers Discounts']
         var_strNonDisclosure = linha['Non-Disclosure On File']
 
-        bot.find_element("//input[@name='customerName']", By.XPATH).send_keys(var_strCompanyName)
-        print("Preenchendo Customer Name")
+        print(f"Preenchendo Customer Name: {var_strCompanyName}")
+        tab.find_element_by_xpath("//input[@name='customerName']").set_text(var_strCompanyName)
 
-        bot.find_element("//input[@name='customerID ']", By.XPATH).send_keys(var_strCustomerId)
-        print("Preenchendo Customer ID")
+        print(f"Preenchendo Customer ID: {var_strCustomerId}")
+        tab.find_element_by_xpath("//input[@name='customerID ']").set_text(var_strCustomerId)
 
-        bot.find_element("//input[@name='contact ']", By.XPATH).send_keys(var_strPrimaryContact)
-        print("Preenchendo Primary Contact")
+        print(f"Preenchendo Primary Contact {var_strPrimaryContact}")
+        tab.find_element_by_xpath("//input[@name='contact ']").set_text(var_strPrimaryContact)
 
-        bot.find_element("//input[@name='street ']", By.XPATH).send_keys(var_strStreetAddress)
-        print("Preenchendo Street Address")
+        print(f"Preenchendo Street Address: {var_strStreetAddress}")
+        tab.find_element_by_xpath("//input[@name='street ']").set_text(var_strStreetAddress)
 
-        bot.find_element("//input[@name='city ']", By.XPATH).send_keys(var_strCity)
         print("Preenchendo City")
+        tab.find_element_by_xpath("//input[@name='city ']").set_text(var_strCity)
 
-        bot.find_element("//select[@name='state']", By.XPATH).send_keys(var_strState)
         print("Selecionando o State")
+        tab.find_element_by_xpath("//select[@name='state']").select_item(var_strState)
 
-        bot.find_element("//input[@name='zip ']", By.XPATH).send_keys(var_strZip)
-        print("Preenchendo Zip")
+        print(f"Preenchendo Zip: {var_strZip}")
+        tab.find_element_by_xpath("//input[@name='zip ']").set_text(var_strZip)
 
-        bot.find_element("//input[@name='email']", By.XPATH).send_keys(var_strEmailAddress)
-        print("Preenchendo Email Address")
+        print(f"Preenchendo Email Address {var_strEmailAddress}")
+        tab.find_element_by_xpath("//input[@name='email']").set_text(var_strEmailAddress)
 
         #Verifica o valor da variável var_strOffersDiscounts e confirma se vai ter desconto ou não
         if var_strOffersDiscounts == 'YES':
-            bot.find_element("//input[@value='option1']", By.XPATH).click()
             print("Selecionado Yes em Desconto")
+            tab.find_element_by_xpath("//input[@value='option1']").click()
         else:
-            bot.find_element("//input[@value='option2']", By.XPATH).click()
+            tab.find_element_by_xpath("//input[@value='option2']").click()
             print("Selecionado No em Desconto")
 
         #Verifica o valor da variável var_strNonDisclosure e confirma se concorda com o termo de confidencialidade
         if var_strNonDisclosure == 'YES':
-            bot.find_element("//input[@type='checkbox']", By.XPATH).click()
             print("Selecionado Acordo de não divulgação")
+            tab.find_element_by_xpath("//input[@type='checkbox']").click()
 
-        bot.find_element("//button[text()='Register']", By.XPATH).click()
-        print(f"Enviando {index} linha formulario preenchido")
+        print(f"Enviando {index+1} linha(s) formulario preenchido")
+        tab.find_element_by_xpath("//button[text()='Register']").click()
 
     
-    # Wait 5 seconds before closing
-    bot.wait(5000)
+    sleep(5)
 
-    # Finish and clean up the Web Browser
-    # You MUST invoke the stop_browser to avoid
-    # leaving instances of the webdriver open
-    bot.stop_browser()
+    tab.close()
 
     # Uncomment to mark this task as finished on BotMaestro
     maestro.finish_task(

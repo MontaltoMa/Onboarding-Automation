@@ -1,0 +1,652 @@
+﻿{
+  "id": "306fdd7c-c917-47bd-8f46-5298657deb07",
+  "name": "chrome",
+  "nodes": [],
+  "locators": [
+    {
+      "id": "e83a9056-cb74-4bc6-9011-2f70373bd81b",
+      "name": "button_aceitar_cookies",
+      "filePath": "995aae08-53c6-4081-b6d8-2ecf3882c631.jpg",
+      "content": {
+        "automationType": "Uia",
+        "processName": {
+          "value": "chrome"
+        },
+        "filePath": {
+          "value": "chrome.exe"
+        },
+        "version": {
+          "value": "1.3"
+        },
+        "childControls": [
+          {
+            "identifier": {
+              "automationId": {
+                "value": "",
+                "excluded": true
+              },
+              "isPassword": {
+                "value": "False",
+                "excluded": true
+              },
+              "orientation": {
+                "value": "None",
+                "excluded": true
+              },
+              "role": {
+                "value": "pane"
+              },
+              "isDirectChild": {
+                "value": "True"
+              },
+              "className": {
+                "value": "Chrome_WidgetWin_1"
+              },
+              "controlMetaType": "Uia",
+              "name": {
+                "value": "Login | Automation Pathfinder | Automation Anywhere - Google Chrome"
+              },
+              "index": {
+                "value": "1",
+                "excluded": true
+              }
+            },
+            "childControls": [
+              {
+                "identifier": {
+                  "isPassword": {
+                    "value": "False",
+                    "excluded": true
+                  },
+                  "orientation": {
+                    "value": "None",
+                    "excluded": true
+                  },
+                  "role": {
+                    "value": "document"
+                  },
+                  "isDirectChild": {
+                    "value": "True"
+                  },
+                  "className": {
+                    "value": "Chrome_RenderWidgetHostHWND"
+                  },
+                  "controlMetaType": "Uia",
+                  "name": {
+                    "value": "Login | Automation Pathfinder | Automation Anywhere"
+                  },
+                  "index": {
+                    "value": "1",
+                    "excluded": true
+                  }
+                },
+                "childControls": [
+                  {
+                    "identifier": {
+                      "automationId": {
+                        "value": "onetrust-banner-sdk"
+                      },
+                      "isPassword": {
+                        "value": "False",
+                        "excluded": true
+                      },
+                      "orientation": {
+                        "value": "None",
+                        "excluded": true
+                      },
+                      "role": {
+                        "value": "group"
+                      },
+                      "isDirectChild": {
+                        "value": "True"
+                      },
+                      "className": {
+                        "value": "",
+                        "excluded": true
+                      },
+                      "controlMetaType": "Uia",
+                      "name": {
+                        "value": "Cookie banner",
+                        "excluded": true
+                      },
+                      "index": {
+                        "value": "1",
+                        "excluded": true
+                      }
+                    },
+                    "childControls": [
+                      {
+                        "identifier": {
+                          "automationId": {
+                            "value": "",
+                            "excluded": true
+                          },
+                          "isPassword": {
+                            "value": "False",
+                            "excluded": true
+                          },
+                          "orientation": {
+                            "value": "None",
+                            "excluded": true
+                          },
+                          "role": {
+                            "value": "custom"
+                          },
+                          "isDirectChild": {
+                            "value": "True"
+                          },
+                          "className": {
+                            "value": "",
+                            "excluded": true
+                          },
+                          "controlMetaType": "Uia",
+                          "name": {
+                            "value": "Privacidade"
+                          },
+                          "index": {
+                            "value": "1",
+                            "excluded": true
+                          }
+                        },
+                        "childControls": [
+                          {
+                            "identifier": {
+                              "automationId": {
+                                "value": "onetrust-accept-btn-handler"
+                              },
+                              "isPassword": {
+                                "value": "False",
+                                "excluded": true
+                              },
+                              "orientation": {
+                                "value": "None",
+                                "excluded": true
+                              },
+                              "role": {
+                                "value": "button"
+                              },
+                              "isDirectChild": {
+                                "value": "True"
+                              },
+                              "className": {
+                                "value": "",
+                                "excluded": true
+                              },
+                              "controlMetaType": "Uia",
+                              "name": {
+                                "value": "Aceitar cookies",
+                                "excluded": true
+                              },
+                              "index": {
+                                "value": "1",
+                                "excluded": true
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "0d079793-4199-4032-9046-3b9234a67f5c",
+      "name": "input_DownloadCsv",
+      "filePath": "f34d5996-c2c0-4eb6-99da-792f56066738.jpg",
+      "content": {
+        "automationType": "Uia",
+        "processName": {
+          "value": "chrome"
+        },
+        "filePath": {
+          "value": "chrome.exe"
+        },
+        "version": {
+          "value": "1.3"
+        },
+        "childControls": [
+          {
+            "identifier": {
+              "automationId": {
+                "value": "",
+                "excluded": true
+              },
+              "isPassword": {
+                "value": "False",
+                "excluded": true
+              },
+              "orientation": {
+                "value": "None",
+                "excluded": true
+              },
+              "role": {
+                "value": "pane"
+              },
+              "isDirectChild": {
+                "value": "True"
+              },
+              "className": {
+                "value": "Chrome_WidgetWin_1"
+              },
+              "controlMetaType": "Uia",
+              "name": {
+                "value": "Customer Onboarding - Google Chrome"
+              },
+              "index": {
+                "value": "1",
+                "excluded": true
+              }
+            },
+            "childControls": [
+              {
+                "identifier": {
+                  "automationId": {
+                    "value": "",
+                    "excluded": true
+                  },
+                  "isPassword": {
+                    "value": "False",
+                    "excluded": true
+                  },
+                  "orientation": {
+                    "value": "None",
+                    "excluded": true
+                  },
+                  "role": {
+                    "value": "pane"
+                  },
+                  "isDirectChild": {
+                    "value": "True"
+                  },
+                  "className": {
+                    "value": "Chrome_WidgetWin_1"
+                  },
+                  "controlMetaType": "Uia",
+                  "name": {
+                    "value": "Histórico de downloads recentes"
+                  },
+                  "index": {
+                    "value": "1",
+                    "excluded": true
+                  }
+                },
+                "childControls": [
+                  {
+                    "identifier": {
+                      "automationId": {
+                        "value": "",
+                        "excluded": true
+                      },
+                      "isPassword": {
+                        "value": "False",
+                        "excluded": true
+                      },
+                      "orientation": {
+                        "value": "None",
+                        "excluded": true
+                      },
+                      "role": {
+                        "value": "pane"
+                      },
+                      "isDirectChild": {
+                        "value": "True"
+                      },
+                      "className": {
+                        "value": "",
+                        "excluded": true
+                      },
+                      "controlMetaType": "Uia",
+                      "name": {
+                        "value": "",
+                        "excluded": true
+                      },
+                      "index": {
+                        "value": "2"
+                      }
+                    },
+                    "childControls": [
+                      {
+                        "identifier": {
+                          "automationId": {
+                            "value": "",
+                            "excluded": true
+                          },
+                          "isPassword": {
+                            "value": "False",
+                            "excluded": true
+                          },
+                          "orientation": {
+                            "value": "None",
+                            "excluded": true
+                          },
+                          "role": {
+                            "value": "pane"
+                          },
+                          "isDirectChild": {
+                            "value": "True"
+                          },
+                          "className": {
+                            "value": "",
+                            "excluded": true
+                          },
+                          "controlMetaType": "Uia",
+                          "name": {
+                            "value": "",
+                            "excluded": true
+                          },
+                          "index": {
+                            "value": "1",
+                            "excluded": true
+                          }
+                        },
+                        "childControls": [
+                          {
+                            "identifier": {
+                              "automationId": {
+                                "value": "",
+                                "excluded": true
+                              },
+                              "isPassword": {
+                                "value": "False",
+                                "excluded": true
+                              },
+                              "orientation": {
+                                "value": "None",
+                                "excluded": true
+                              },
+                              "role": {
+                                "value": "pane"
+                              },
+                              "isDirectChild": {
+                                "value": "True"
+                              },
+                              "className": {
+                                "value": "",
+                                "excluded": true
+                              },
+                              "controlMetaType": "Uia",
+                              "name": {
+                                "value": "",
+                                "excluded": true
+                              },
+                              "index": {
+                                "value": "2"
+                              }
+                            },
+                            "childControls": [
+                              {
+                                "identifier": {
+                                  "automationId": {
+                                    "value": "",
+                                    "excluded": true
+                                  },
+                                  "isPassword": {
+                                    "value": "False",
+                                    "excluded": true
+                                  },
+                                  "orientation": {
+                                    "value": "None",
+                                    "excluded": true
+                                  },
+                                  "role": {
+                                    "value": "pane"
+                                  },
+                                  "isDirectChild": {
+                                    "value": "True"
+                                  },
+                                  "className": {
+                                    "value": "",
+                                    "excluded": true
+                                  },
+                                  "controlMetaType": "Uia",
+                                  "name": {
+                                    "value": "",
+                                    "excluded": true
+                                  },
+                                  "index": {
+                                    "value": "1",
+                                    "excluded": true
+                                  }
+                                },
+                                "childControls": [
+                                  {
+                                    "identifier": {
+                                      "automationId": {
+                                        "value": "",
+                                        "excluded": true
+                                      },
+                                      "isPassword": {
+                                        "value": "False",
+                                        "excluded": true
+                                      },
+                                      "orientation": {
+                                        "value": "None",
+                                        "excluded": true
+                                      },
+                                      "role": {
+                                        "value": "pane"
+                                      },
+                                      "isDirectChild": {
+                                        "value": "True"
+                                      },
+                                      "className": {
+                                        "value": "",
+                                        "excluded": true
+                                      },
+                                      "controlMetaType": "Uia",
+                                      "name": {
+                                        "value": "",
+                                        "excluded": true
+                                      },
+                                      "index": {
+                                        "value": "1",
+                                        "excluded": true
+                                      }
+                                    },
+                                    "childControls": [
+                                      {
+                                        "identifier": {
+                                          "automationId": {
+                                            "value": "",
+                                            "excluded": true
+                                          },
+                                          "isPassword": {
+                                            "value": "False",
+                                            "excluded": true
+                                          },
+                                          "orientation": {
+                                            "value": "None",
+                                            "excluded": true
+                                          },
+                                          "role": {
+                                            "value": "pane"
+                                          },
+                                          "isDirectChild": {
+                                            "value": "True"
+                                          },
+                                          "className": {
+                                            "value": "",
+                                            "excluded": true
+                                          },
+                                          "controlMetaType": "Uia",
+                                          "name": {
+                                            "value": "",
+                                            "excluded": true
+                                          },
+                                          "index": {
+                                            "value": "2"
+                                          }
+                                        },
+                                        "childControls": [
+                                          {
+                                            "identifier": {
+                                              "automationId": {
+                                                "value": "",
+                                                "excluded": true
+                                              },
+                                              "isPassword": {
+                                                "value": "False",
+                                                "excluded": true
+                                              },
+                                              "orientation": {
+                                                "value": "None",
+                                                "excluded": true
+                                              },
+                                              "role": {
+                                                "value": "pane"
+                                              },
+                                              "isDirectChild": {
+                                                "value": "True"
+                                              },
+                                              "className": {
+                                                "value": "",
+                                                "excluded": true
+                                              },
+                                              "controlMetaType": "Uia",
+                                              "name": {
+                                                "value": "",
+                                                "excluded": true
+                                              },
+                                              "index": {
+                                                "value": "1",
+                                                "excluded": true
+                                              }
+                                            },
+                                            "childControls": [
+                                              {
+                                                "identifier": {
+                                                  "automationId": {
+                                                    "value": "",
+                                                    "excluded": true
+                                                  },
+                                                  "isPassword": {
+                                                    "value": "False",
+                                                    "excluded": true
+                                                  },
+                                                  "orientation": {
+                                                    "value": "None",
+                                                    "excluded": true
+                                                  },
+                                                  "role": {
+                                                    "value": "pane"
+                                                  },
+                                                  "isDirectChild": {
+                                                    "value": "True"
+                                                  },
+                                                  "className": {
+                                                    "value": "",
+                                                    "excluded": true
+                                                  },
+                                                  "controlMetaType": "Uia",
+                                                  "name": {
+                                                    "value": "",
+                                                    "excluded": true
+                                                  },
+                                                  "index": {
+                                                    "value": "1",
+                                                    "excluded": true
+                                                  }
+                                                },
+                                                "childControls": [
+                                                  {
+                                                    "identifier": {
+                                                      "automationId": {
+                                                        "value": "",
+                                                        "excluded": true
+                                                      },
+                                                      "isPassword": {
+                                                        "value": "False",
+                                                        "excluded": true
+                                                      },
+                                                      "orientation": {
+                                                        "value": "None",
+                                                        "excluded": true
+                                                      },
+                                                      "role": {
+                                                        "value": "pane"
+                                                      },
+                                                      "isDirectChild": {
+                                                        "value": "True"
+                                                      },
+                                                      "className": {
+                                                        "value": "",
+                                                        "excluded": true
+                                                      },
+                                                      "controlMetaType": "Uia",
+                                                      "name": {
+                                                        "value": "",
+                                                        "excluded": true
+                                                      },
+                                                      "index": {
+                                                        "value": "1",
+                                                        "excluded": true
+                                                      }
+                                                    },
+                                                    "childControls": [
+                                                      {
+                                                        "identifier": {
+                                                          "automationId": {
+                                                            "value": "",
+                                                            "excluded": true
+                                                          },
+                                                          "isPassword": {
+                                                            "value": "False",
+                                                            "excluded": true
+                                                          },
+                                                          "orientation": {
+                                                            "value": "None",
+                                                            "excluded": true
+                                                          },
+                                                          "role": {
+                                                            "value": "button"
+                                                          },
+                                                          "isDirectChild": {
+                                                            "value": "True"
+                                                          },
+                                                          "className": {
+                                                            "value": "",
+                                                            "excluded": true
+                                                          },
+                                                          "controlMetaType": "Uia",
+                                                          "name": {
+                                                            "value": "customer-onboarding-challenge.csv 896 bytes • Concluir"
+                                                          },
+                                                          "index": {
+                                                            "value": "1",
+                                                            "excluded": true
+                                                          }
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "originalName": "chrome"
+}
